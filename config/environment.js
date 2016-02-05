@@ -16,7 +16,13 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+     contentSecurityPolicy: {
+      'connect-src': "'self' data: private-227b9-jsonapifizzbuzz.apiary-mock.com",
+      'font-src': "'self' data: fonts.gstatic.com",
+      'img-src': "'self' data: semantic-ui.com",
+      'style-src': "'self' data: fonts.googleapis.com"
+    },
   };
 
   if (environment === 'development') {
